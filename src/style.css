@@ -1,7 +1,30 @@
+#initial-page{
+    background-image: url("../pantalla_de_bienvenida.png");
+    background-size: 100vw;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    height: 70vw;
+    padding: 0.9vw;
+    margin-top: 15vw;
+}
+
+#start{
+    margin-top: 33.5vw;
+    margin-left: 42vw;
+    background-color: transparent;
+    height: 13.5vw;
+    width: 13.5vw;
+    border-radius: 10vw;
+}
+
+main{
+    display: none;
+}
 
 body {
     margin: 0vw;
     background-image: url(http://oi65.tinypic.com/nbdlr5.jpg);
+    background-size: 98vw;
 }
 
 #mainly, #center-area {
@@ -17,13 +40,27 @@ body {
     padding: 0.9vw;
 }
 #seeker-bar {
-    background-color: rgba(10, 34, 248, 0.884);
-    text-align: right;
+    background-color:  rgb(0, 68, 255);
+    text-align: center;
     font-family: 'Patrick Hand', cursive;
     color: rgb(248, 212, 9);
     font-weight: bold;
-    font-size: 4vw;
+    font-size: 3vw;
     margin: -2vw;
+}
+
+.button-order, #button-stats, #return-button{
+    border-width: 0.5vw;
+    background-color: rgb(0, 110, 255);
+    border-radius: 2vw;
+    border-style: outset;
+    font-family: 'Patrick Hand', cursive;
+    color: rgb(248, 212, 9);
+    font-weight: bold;
+    font-size: 2vw;
+    margin: 0.5vw;
+    height: 4vw;
+    text-align: center;
 }
 
 #seeker{
@@ -146,7 +183,15 @@ body {
     text-align: justify;
     
 }
-.casilla h6 {
+
+#stats-section h6{
+    font-family: 'Patrick Hand', cursive;
+    font-size: 2.5vw;
+    color: rgb(248, 212, 9);
+    text-shadow: 2px 2px 2px black;
+    margin-left: 43vw;
+}
+.casilla h6{
     font-family: 'Patrick Hand', cursive;
     font-size: 2.5vw;
     color: rgb(248, 212, 9);
@@ -154,15 +199,28 @@ body {
     text-align: center;
     text-shadow: 2px 2px 2px black;
 }
-.casilla img {
+.img-pokemon {
     float: right;
     width: 10vw;
 }
+
 .casilla p {
     margin: 0vw;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
+    font-size: 1vw;
 }
+
+#stats-section{
+    display: none;
+    position: absolute;
+}
+
+.tabla{
+    border-style: groove;
+    border-width: thick;
+}
+
 @media(max-width:360px) {
     .casilla {
         display: inline-block;
@@ -177,12 +235,13 @@ body {
     .casilla h6 {
         font-size: 4vw;
     }
-    .casilla img {
+    .img-pokemon {
         margin-top: 1vw;
         float: right;
         width: 15.5vw;
     }
     .casilla p {
         font-family: 'Roboto', sans-serif;
+        font-size: 2vw;
     }
 }
