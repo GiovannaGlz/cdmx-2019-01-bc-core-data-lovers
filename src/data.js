@@ -1,6 +1,3 @@
-opcionNombre = document.getElementById("listaNombres");
-//const clases = document.getElementById("class-selector");
-
 window.pokemones = {
 
  filterData: (typePokemon, dataPokemon)=> {
@@ -12,18 +9,38 @@ window.pokemones = {
  let pokemonEncontrado = dataPokemon.filter(dataPokemon => (dataPokemon.name.toUpperCase().match(nPokemon.toUpperCase()))); 
   return (pokemonEncontrado)
   },
-}
 
+  sortName: (dataPokemon)=> {
+    let orderAscendent = dataPokemon.sort((prev,next)=>{
+    if (prev.name > next.name) {
+      return 1;
+    }
+    if (prev.name < next.name){
+      return -1;
+    }
+    return 0;
+  });
+  return orderAscendent;
+  },
+
+  sortNameReverse: (orderAscendent)=> {
+    let orderReverse= orderAscendent.reverse()
+  return orderReverse;
+  },
+
+  computeStatsMaxH: (arrayHeigth)=>{
+    return Math.max.apply(null, arrayHeigth);
+  },
+
+  computeStatsMinH: (arrayHeigth)=>{
+    return Math.min.apply(null, arrayHeigth);
+  },
+
+  computeStatsMaxW: (arrayWeight)=>{
+    return Math.max.apply(null, arrayWeight);
+  },
   
-// sortName: (dataPokemon)=> {
-//   const filterName= dataPokemon.name.sort((a,b)=> {
-//       if(a.name > b.name){
-//         return 1;
-//       }
-//       if(a.name < b.name){
-//         return-1;
-//       }
-//     })
-//     return(filterName)
-//   },
-//   compuStats: ()=>{
+  computeStatsMinW: (arrayWeight)=>{
+    return Math.min.apply(null, arrayWeight);
+  },
+}

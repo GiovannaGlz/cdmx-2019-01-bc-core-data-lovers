@@ -1,44 +1,54 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head></head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search Pokemon</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-    <link rel="shortcut icon" href="http://oi67.tinypic.com/2gsqqvs.jpg">
-  </head>
-  <body>
-    <div id="root"></div>
-    <main>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscador Pokémon</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link rel="shortcut icon" href="http://oi67.tinypic.com/2gsqqvs.jpg">
+</head>
+
+<body>
+  <div id="root">
+    <section id="initial-page">
+      <input type="button" value="" id="start">
+    </section>
+    <main id="main">
       <section id="mainly"></section>
       <section id="seeker-bar">
+        <form action="post" id="order-form">Ordenar alfabéticamente
+          <input type="button" value="A - Z" class="button-order" id="order-az">
+          <input type="button" value="Z - A" class="button-order" id="order-za">
+        </form>
         <label for="seeker">Buscador</label>
-        <!--Listado de clases Pokemon--> 
+        <!--Listado de clases Pokemon-->
         <select name="clases" id="class-selector">
-          <option>Clase de Pokémon</option>
-          <option value="Fire" class="optionFilter">Fuego</option>
-          <option value="Water" class="optionFilter">Agua</option>
-          <option value="Ice" class="optionFilter">Hielo</option>
-          <option value="Grass" class="optionFilter">Hierba</option>
-          <option value="Poison" class="optionFilter">Veneno</option>
-          <option value="Psychic" class="optionFilter">Psiquico</option>
-          <option value="Ground" class="optionFilter">Tierra</option>
-          <option value="Rock" class="optionFilter">Roca</option>
-          <option value="Electric" class="optionFilter">Electrico</option>
-          <option value="Bug" class="optionFilter">Insecto</option>
-          <option value="Normal" class="optionFilter">Normal</option>
-          <option value="Fighting" class="optionFilter">Peleador</option>
-          <option value="Ghost" class="optionFilter">Fantasma</option>
+          <optgroup label="Tipos de pokémon">
+            <option value="Water" class="optionFilter">Agua</option>
+            <option value="Electric" class="optionFilter">Electrico</option>
+            <option value="Ghost" class="optionFilter">Fantasma</option>
+            <option value="Fire" class="optionFilter">Fuego</option>
+            <option value="Ice" class="optionFilter">Hielo</option>
+            <option value="Grass" class="optionFilter">Hierba</option>
+            <option value="Bug" class="optionFilter">Insecto</option>
+            <option value="Flying" class="optionFilter">Volador</option>
+            <option value="Poison" class="optionFilter">Veneno</option>
+            <option value="Normal" class="optionFilter">Normal</option>
+            <option value="Fighting" class="optionFilter">Peleador</option>
+            <option value="Psychic" class="optionFilter">Psiquico</option>
+            <option value="Rock" class="optionFilter">Roca</option>
+            <option value="Ground" class="optionFilter">Tierra</option>
+          </optgroup>
         </select>
-
-        <input type="text" name="search" placeholder="Nombre del Pokemon" id="seeker">
-        <ul id="listaNombres"></ul>
+        <input type="text" name="search" placeholder="Nombre del Pokémon" id="seeker"><br>
+        <input type="button" value="Mostrar estadísticas" id="button-stats">
       </section>
 
       <section id="center-area">
-          <!--<div class="info">
+        <!--<div class="info">
           <figure class="pokemon-img">
               <img src="" alt="">
             </figure>
@@ -61,20 +71,25 @@
           <figure class="pokeball" id="netx-evolution">
             <img class="pokeball" src="../pokeball_PNG8.png" alt="">
           </figure>
-        </div>-->          
+        </div>          
+      </section>-->
       </section>
+      <section id="stats-section"><h6>ESTADÍSTICAS</h6>
 
+        <input type="button" value="Regresar" id="return-button">
       </section>
 
     </main>
-   
-   
-    <!-- <script src="./data/injuries/injuries.js"></script> -->
-    <script src="./data/pokemon/pokemon.js"></script>
-    <!-- <script src="./data/steam/steam.js"></script> -->
-    <!-- <script src="./data/worldbank/worldbank.js"></script> -->
-    <!-- <script src="./data/lol/lol.js"></script> -->
-    <script src="data.js"></script>
-    <script src="main.js"></script>
-  </body>
+  </div>
+
+
+  <!-- <script src="./data/injuries/injuries.js"></script> -->
+  <script src="./data/pokemon/pokemon.js"></script>
+  <!-- <script src="./data/steam/steam.js"></script> -->
+  <!-- <script src="./data/worldbank/worldbank.js"></script> -->
+  <!-- <script src="./data/lol/lol.js"></script> -->
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+
 </html>
