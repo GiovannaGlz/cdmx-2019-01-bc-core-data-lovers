@@ -80,7 +80,7 @@ getStats.addEventListener('click', () => {
   const minWeight = window.pokemones.computeStatsMinW(arrayWeight);
   console.log(minWeight)
   const printStats= (maxHeigth, minHeigth, maxWeight, minWeight) =>{
-   statsArea.innerHTML= `<table>
+   statsArea.innerHTML(`<table>
      <tr>
        <th class="tabla">Medidas</th>
        <th class="tabla">Minímo</th>
@@ -96,7 +96,7 @@ getStats.addEventListener('click', () => {
        <td class="tabla">${minWeight} kg</td>
        <td class="tabla">${maxWeight} kg</td>
      </tr>
-   </table>`;
+   </table>`);
    return (printStats)
   }
 })
